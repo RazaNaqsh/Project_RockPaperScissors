@@ -71,7 +71,7 @@ let playerScore=0;
 function game(){
     
     
-    for (let i=0; i<5; i++){
+    while(playerScore !== 5 && computerScore !== 5){
         updateScores();
         console.log("player chooses: "+player + ". Comp chooses: "+comp);
         console.log(playRound(playerSelection,computerSelection));
@@ -90,6 +90,10 @@ function game(){
         }
         console.log("Playerscore: "+playerScore +"  & Computerscore: "+computerScore);
     }
+    if (playerScore == 5)
+    console.log("Player Wins!");
+    else if (computerScore == 5);
+    console.log("Comp Wins!");
 }
 
 game();
