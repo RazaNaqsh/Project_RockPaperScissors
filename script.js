@@ -92,7 +92,7 @@ function game(){
     }
     if (playerScore == 5)
     console.log("Player Wins!");
-    else if (computerScore == 5);
+    else
     console.log("Comp Wins!");
 }
 
