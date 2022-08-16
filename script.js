@@ -1,17 +1,25 @@
 //Input from player
-
 function playerChoice(){
     let playerInput = prompt("enter your choice");
     return playerInput[0].toUpperCase() + playerInput.slice(1).toLowerCase();
 }
 
+//input from comp
 function getComputerChoice(){
     let weapons = ["Rock", "Paper", "Scissors"]
     return weapons[Math.floor(Math.random() * weapons.length)]
     }
 
-let playerSelection = console.log("Player chooses: "+playerChoice());
-let computerSelection = console.log("Comp chooses: "+getComputerChoice());
+    //assigning actual values
+let player=playerChoice();
+let comp= getComputerChoice();
+
+console.log("player chooses: "+player + ". Comp chooses: "+comp);
+
+//arguments to be called by playRound function 
+let playerSelection = player;
+let computerSelection = comp;
+
 
 //call this function to update for new round
 function updateScores(){
@@ -21,7 +29,40 @@ function updateScores(){
 }
 
 
+//function to play one round of game
+function playRound(playerSelection,computerSelection) {
+    
+    //player winning scenarios
+if (playerSelection==="Rock" && computerSelection==="Scissors")
+return "You win! Rock beats Scissors";
+else if (playerSelection==="Scissors" && computerSelection==="Paper")
+return "You win! Scissors beats Paper";
+else if (playerSelection==="Paper" && computerSelection==="Rock")
+return "You win! Paper beats Rock"
 
+//Computer winning scenarios
+
+else if (playerSelection==="Scissors" && computerSelection==="Rock")
+return "You lose! Rock beats Scissors"
+else if (playerSelection==="Rock" && computerSelection==="Paper")
+return "You lose! Paper beats Rock"
+else if (playerSelection==="Paper" && computerSelection==="Scissors")
+return "You lose! Scissors beats Paper"
+
+//tie condition
+else if (playerSelection==="Scissors" && computerSelection==="Scissors")
+return "Its a Tie!"
+else if (playerSelection==="Rock" && computerSelection==="Rock")
+return "Its a Tie!"
+else if (playerSelection==="Paper" && computerSelection==="Paper")
+return "Its a Tie!"
+else
+return "Wrong input!"
+
+
+}
+
+console.log(playRound(playerSelection,computerSelection));
 
 
 
