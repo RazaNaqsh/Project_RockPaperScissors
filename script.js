@@ -13,6 +13,7 @@ function getComputerChoice(){
 
 
 //player input
+
 const playerInput = prompt("Choose Your Weapon!");
 
 console.log('player choses:',playerInput);
@@ -34,7 +35,7 @@ console.log("computer choses:",computerSelection);
 //function to play one round of game
 
 function playRound(playerSelection,computerSelection) {
-
+    
     //player winning scenarios
 if (playerSelection==="Rock" && computerSelection==="Scissors")
 return "You win! Rock beats Scissors";
@@ -68,21 +69,27 @@ return "Wrong input!"
 console.log(playRound(playerSelection,computerSelection))
 
 //game function
-let playerScore=0;
 let computerScore = 0;
+let playerScore=0;
+
 function game(){
+    
     for (let i=0; i<5; i++){
-        if (playRound() === "You win! Rock beats Scissors" || playRound() === "You win! Scissors beats Paper" || playRound() === "You win! Paper beats Rock"){
+        playRound(playerSelection,computerSelection)
+        
+        if (playRound(playerSelection,computerSelection) === "You win! Rock beats Scissors" || playRound() === "You win! Scissors beats Paper" || playRound() === "You win! Paper beats Rock"){
             playerScore++;
         }
-        else if (playRound() === "You lose! Rock beats Scissors" || playRound() === "You lose! Paper beats Rock" || playRound() === "You lose! Scissors beats Paper"){
+        else if (playRound(playerSelection,computerSelection) === "You lose! Rock beats Scissors" || playRound() === "You lose! Paper beats Rock" || playRound() === "You lose! Scissors beats Paper"){
             computerScore++;
         }
-        else 
-        playerScore+=0;
-        computerScore+=0;
+        else {
+            playerScore+=0;
+            computerScore+=0;
+
+        }
         playRound();
     }
-    return ("Playerscore:",playerScore," ComputerScore:",computerScore)
+    return ("Playerscore:" + playerScore+ " ComputerScore:"+ computerScore)
 }
-game();
+console.log(game());
