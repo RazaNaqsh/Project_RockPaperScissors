@@ -29,7 +29,7 @@ const playerSelection = caseCorrector(playerInput);
 
 
 console.log('case correction:',playerSelection);
-console.log("computer choses:",getComputerChoice());
+console.log("computer choses:",computerSelection);
 
 //function to play one round of game
 
