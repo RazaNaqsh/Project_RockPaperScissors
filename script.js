@@ -72,6 +72,7 @@ function game(){
     
     
     while(playerScore !== 5 && computerScore !== 5){
+       
         updateScores();
         console.log("player chooses: "+player + ". Comp chooses: "+comp);
         console.log(playRound(playerSelection,computerSelection));
