@@ -1,95 +1,151 @@
+//Input from player
 
-
-
-//Function to make computer play
+function playerChoice(){
+    let playerInput = prompt("enter your choice");
+    return playerInput[0].toUpperCase() + playerInput.slice(1).toLowerCase();
+}
 
 function getComputerChoice(){
     let weapons = ["Rock", "Paper", "Scissors"]
     return weapons[Math.floor(Math.random() * weapons.length)]
     }
 
+let playerSelection = console.log("Player chooses: "+playerChoice());
+let computerSelection = console.log("Comp chooses: "+getComputerChoice());
 
-
-
-
-//player input
-
-const playerInput = prompt("Choose Your Weapon!");
-
-console.log('player choses:',playerInput);
-
-//function for correcting case of input
-function caseCorrector(input){
-    return input[0].toUpperCase()+input.slice(1).toLowerCase()
+//call this function to update for new round
+function updateScores(){
+    playerSelection= playerChoice();
+    computerSelection= getComputerChoice();
+    return ("new Scores are- Player: "+playerSelection+ " Comp: "+computerSelection);
 }
 
 
-const computerSelection = getComputerChoice();
-const playerSelection = caseCorrector(playerInput);
 
 
 
-console.log('case correction:',playerSelection);
-console.log("computer choses:",computerSelection);
 
-//function to play one round of game
 
-function playRound(playerSelection,computerSelection) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //Function to make computer play
+
+// function getComputerChoice(){
+//     let weapons = ["Rock", "Paper", "Scissors"]
+//     return weapons[Math.floor(Math.random() * weapons.length)]
+//     }
+
+
+
+
+
+// //player input
+
+// const playerInput = prompt("Choose Your Weapon!");
+
+// console.log('player choses:',playerInput);
+
+// //function for correcting case of input
+// function caseCorrector(input){
+//     return input[0].toUpperCase()+input.slice(1).toLowerCase()
+// }
+
+
+// const computerSelection = getComputerChoice();
+// const playerSelection = caseCorrector(playerInput);
+
+
+
+// console.log('case correction:',playerSelection);
+// console.log("computer choses:",computerSelection);
+
+// //function to play one round of game
+
+// function playRound(playerSelection,computerSelection) {
     
-    //player winning scenarios
-if (playerSelection==="Rock" && computerSelection==="Scissors")
-return "You win! Rock beats Scissors";
-else if (playerSelection==="Scissors" && computerSelection==="Paper")
-return "You win! Scissors beats Paper";
-else if (playerSelection==="Paper" && computerSelection==="Rock")
-return "You win! Paper beats Rock"
+//     //player winning scenarios
+// if (playerSelection==="Rock" && computerSelection==="Scissors")
+// return "You win! Rock beats Scissors";
+// else if (playerSelection==="Scissors" && computerSelection==="Paper")
+// return "You win! Scissors beats Paper";
+// else if (playerSelection==="Paper" && computerSelection==="Rock")
+// return "You win! Paper beats Rock"
 
-//Computer winning scenarios
+// //Computer winning scenarios
 
-else if (playerSelection==="Scissors" && computerSelection==="Rock")
-return "You lose! Rock beats Scissors"
-else if (playerSelection==="Rock" && computerSelection==="Paper")
-return "You lose! Paper beats Rock"
-else if (playerSelection==="Paper" && computerSelection==="Scissors")
-return "You lose! Scissors beats Paper"
+// else if (playerSelection==="Scissors" && computerSelection==="Rock")
+// return "You lose! Rock beats Scissors"
+// else if (playerSelection==="Rock" && computerSelection==="Paper")
+// return "You lose! Paper beats Rock"
+// else if (playerSelection==="Paper" && computerSelection==="Scissors")
+// return "You lose! Scissors beats Paper"
 
-//tie condition
-else if (playerSelection==="Scissors" && computerSelection==="Scissors")
-return "Its a Tie!"
-else if (playerSelection==="Rock" && computerSelection==="Rock")
-return "Its a Tie!"
-else if (playerSelection==="Paper" && computerSelection==="Paper")
-return "Its a Tie!"
-else
-return "Wrong input!"
+// //tie condition
+// else if (playerSelection==="Scissors" && computerSelection==="Scissors")
+// return "Its a Tie!"
+// else if (playerSelection==="Rock" && computerSelection==="Rock")
+// return "Its a Tie!"
+// else if (playerSelection==="Paper" && computerSelection==="Paper")
+// return "Its a Tie!"
+// else
+// return "Wrong input!"
 
 
-}
+// }
 
-console.log(playRound(playerSelection,computerSelection))
+// console.log(playRound(playerSelection,computerSelection))
 
-//game function
-let computerScore = 0;
-let playerScore=0;
+// //game function
+// let computerScore = 0;
+// let playerScore=0;
 
-function game(){
+// function game(){
     
-    for (let i=0; i<5; i++){
-        playRound(playerSelection,computerSelection)
+//     for (let i=0; i<5; i++){
         
-        if (playRound(playerSelection,computerSelection) === "You win! Rock beats Scissors" || playRound() === "You win! Scissors beats Paper" || playRound() === "You win! Paper beats Rock"){
-            playerScore++;
-        }
-        else if (playRound(playerSelection,computerSelection) === "You lose! Rock beats Scissors" || playRound() === "You lose! Paper beats Rock" || playRound() === "You lose! Scissors beats Paper"){
-            computerScore++;
-        }
-        else {
-            playerScore+=0;
-            computerScore+=0;
+//         playRound(playerSelection,computerSelection)
+//         if (playRound(playerSelection,computerSelection) === "You win! Rock beats Scissors" || playRound() === "You win! Scissors beats Paper" || playRound() === "You win! Paper beats Rock"){
+//             playerScore++;
+//         }
+//         else if (playRound(playerSelection,computerSelection) === "You lose! Rock beats Scissors" || playRound() === "You lose! Paper beats Rock" || playRound() === "You lose! Scissors beats Paper"){
+//             computerScore++;
+//         }
+//         else {
+//             playerScore+=0;
+//             computerScore+=0;
 
-        }
-        playRound();
-    }
-    return ("Playerscore:" + playerScore+ " ComputerScore:"+ computerScore)
-}
-console.log(game());
+//         }
+//         playRound();
+//     }
+//     return ("Playerscore:" + playerScore+ " ComputerScore:"+ computerScore)
+// }
+// console.log(game());
