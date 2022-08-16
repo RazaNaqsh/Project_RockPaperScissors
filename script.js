@@ -66,3 +66,23 @@ return "Wrong input!"
 }
 
 console.log(playRound(playerSelection,computerSelection))
+
+//game function
+let playerScore=0;
+let computerScore = 0;
+function game(){
+    for (let i=0; i<5; i++){
+        if (playRound() === "You win! Rock beats Scissors" || playRound() === "You win! Scissors beats Paper" || playRound() === "You win! Paper beats Rock"){
+            playerScore++;
+        }
+        else if (playRound() === "You lose! Rock beats Scissors" || playRound() === "You lose! Paper beats Rock" || playRound() === "You lose! Scissors beats Paper"){
+            computerScore++;
+        }
+        else 
+        playerScore+=0;
+        computerScore+=0;
+        playRound();
+    }
+    return ("Playerscore:",playerScore," ComputerScore:",computerScore)
+}
+game();
