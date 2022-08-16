@@ -14,7 +14,6 @@ function getComputerChoice(){
 let player=playerChoice();
 let comp= getComputerChoice();
 
-//call1
 
 //arguments to be called by playRound function 
 let playerSelection = player;
@@ -62,9 +61,10 @@ else
 return "Wrong input!"
 }
 
-//console for pr
 
 //game function
+
+//set default scores
 let computerScore = 0;
 let playerScore=0;
 
