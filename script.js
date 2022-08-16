@@ -1,9 +1,5 @@
 
 
-//function for correcting case of input
-function caseCorrector(input){
-    return input[0].toUpperCase()+input.slice(1).toLowerCase()
-}
 
 //Function to make computer play
 
@@ -14,10 +10,22 @@ function getComputerChoice(){
 
 
 
-const computerSelection = getComputerChoice();
+
+
+//player input
 const playerInput = prompt("Choose Your Weapon!");
-const playerSelection = caseCorrector(playerInput);
+
 console.log('player choses:',playerInput);
+
+//function for correcting case of input
+function caseCorrector(input){
+    return input[0].toUpperCase()+input.slice(1).toLowerCase()
+}
+
+
+const computerSelection = getComputerChoice();
+const playerSelection = caseCorrector(playerInput);
+
 
 
 console.log('case correction:',playerSelection);
