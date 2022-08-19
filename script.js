@@ -119,5 +119,3 @@ const scoreComputer = document.querySelector('.scoreComputer');
 scorePlayer.textContent = 'playerScore:'+playerScore;
 scoreComputer.textContent = 'computerScore:'+computerScore;
 
-
-console.log(document.querySelectorAll("#rock"));
