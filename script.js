@@ -53,8 +53,6 @@ let playerScore=0;
 
 function game(){
     
-        console.log("player chooses: "+playerSelection + ". Comp chooses: "+computerSelection);
-        console.log("Round = " + playRound(playerSelection,computerSelection));
 
         playRound(playerSelection,computerSelection);
         if (playRound(playerSelection,computerSelection) === "You win! Rock beats Scissors" || playRound(playerSelection,computerSelection) === "You win! Scissors beats Paper" || playRound(playerSelection,computerSelection) === "You win! Paper beats Rock"){
@@ -70,7 +68,6 @@ function game(){
         }
         document.querySelector('.play').textContent = "player chooses: "+playerSelection + ". Comp chooses: "+computerSelection ;
         document.querySelector('.event').textContent =  "Current Round = " + playRound(playerSelection,computerSelection);
-        console.log("Playerscore: "+playerScore +"  & Computerscore: "+computerScore);
         
         
         //displaying score in page
@@ -90,22 +87,10 @@ function game(){
     }
     
 }
-
-// game(); //gonna re-enable it later , temporarily off to avoid prompt menu
-
-// lets write pseudocode to make it easier
-// so its tell that this click addEventListener should call my playround function.
-// playround function plays one round of game
-// and with the correct playerselection,
-// so one way can be to update playerselection in each button click event and
-// call playerRound function with that parameter.
-
 const btnRock = document.querySelector('#rock');
 btnRock.addEventListener('click' , ()=>{
     playerSelection = "Rock";
     computerSelection =getComputerChoice();
-    // console.log(playerSelection,computerSelection);
-    // console.log(playRound(playerSelection,computerSelection)) ;
     game();
 })
 
@@ -113,8 +98,6 @@ const btnPaper = document.querySelector('#paper');
 btnPaper.addEventListener('click', () =>{
     playerSelection = "Paper";
     computerSelection =getComputerChoice();
-    // console.log(playerSelection,computerSelection);
-    // console.log(playRound(playerSelection,computerSelection)) ;
     game();
 })
 
@@ -122,15 +105,9 @@ const btnScissors = document.querySelector('#scissors');
 btnScissors.addEventListener('click', ()=>{
     playerSelection="Scissors"
     computerSelection =getComputerChoice();
-    // console.log(playerSelection,computerSelection);
-    // console.log(playRound(playerSelection,computerSelection)) ;
     game();
 })
 
-//another pseudo 
-//now i gotta create and manipulate a div which will show up score in the webpage
-// so i gotta show the score by textcontent i guess into div 
-// lets create div and target it first
 
 const scorePlayer = document.querySelector('.scorePlayer');
 const scoreComputer = document.querySelector('.scoreComputer');
