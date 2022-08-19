@@ -11,12 +11,12 @@ function getComputerChoice(){
     }
 
     //assigning actual values
-let player=playerChoice();
+// let player=playerChoice();
 let comp= getComputerChoice();
 
 
 //arguments to be called by playRound function 
-let playerSelection = player;
+let playerSelection = ''; //removing the prompt function to just make click function
 let computerSelection = comp;
 
 
@@ -97,7 +97,7 @@ function game(){
     // console.log("Comp Wins!");
 }
 
-game();
+// game(); //gonna re-enable it later , temporarily off to avoid prompt menu
 
 // lets write pseudocode to make it easier
 // so its tell that this click addEventListener should call my playround function.
@@ -106,12 +106,11 @@ game();
 // so one way can be to update playerselection in each button click event and
 // call playerRound function with that parameter.
 
-const buttons = document.querySelectorAll("button");
-
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        console.log("button clicked");
-    });
+const btnRock = document.querySelector('#rock');
+btnRock.addEventListener('click' , ()=>{
+    playerSelection = "Rock";
+    console.log(playerSelection);
+    // playRound(playerSelection);
 })
 
 
