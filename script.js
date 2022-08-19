@@ -134,4 +134,8 @@ btnScissors.addEventListener('click', ()=>{
     game();
 })
 
+//another pseudo 
+//now i gotta create and manipulate a div which will show up score in the webpage
+// so i gotta show the score by textcontent i guess into div 
+// lets create div and target it first
 
