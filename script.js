@@ -58,6 +58,8 @@ else if (playerSelection==="Paper" && computerSelection==="Paper")
 return "Its a Tie!"
 else
 return "Wrong input!"
+
+
 }
 
 
@@ -73,7 +75,7 @@ function game(){
     // while(playerScore !== 5 && computerScore !== 5){
        
         // updateScores();
-        console.log("player chooses: "+player + ". Comp chooses: "+comp);
+        console.log("player chooses: "+playerSelection + ". Comp chooses: "+computerSelection);
         console.log(playRound(playerSelection,computerSelection));
 
         playRound(playerSelection,computerSelection);
@@ -109,24 +111,27 @@ const btnRock = document.querySelector('#rock');
 btnRock.addEventListener('click' , ()=>{
     playerSelection = "Rock";
     computerSelection =getComputerChoice();
-    console.log(playerSelection,computerSelection);
-    console.log(playRound(playerSelection,computerSelection)) ;
+    // console.log(playerSelection,computerSelection);
+    // console.log(playRound(playerSelection,computerSelection)) ;
+    game();
 })
 
 const btnPaper = document.querySelector('#paper');
 btnPaper.addEventListener('click', () =>{
     playerSelection = "Paper";
     computerSelection =getComputerChoice();
-    console.log(playerSelection,computerSelection);
-    console.log(playRound(playerSelection,computerSelection)) ;
+    // console.log(playerSelection,computerSelection);
+    // console.log(playRound(playerSelection,computerSelection)) ;
+    game();
 })
 
 const btnScissors = document.querySelector('#scissors');
 btnScissors.addEventListener('click', ()=>{
     playerSelection="Scissors"
     computerSelection =getComputerChoice();
-    console.log(playerSelection,computerSelection);
-    console.log(playRound(playerSelection,computerSelection)) ;
+    // console.log(playerSelection,computerSelection);
+    // console.log(playRound(playerSelection,computerSelection)) ;
+    game();
 })
 
 
