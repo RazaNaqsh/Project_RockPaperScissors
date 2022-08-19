@@ -12,12 +12,11 @@ function getComputerChoice(){
 
     //assigning actual values
 // let player=playerChoice();
-let comp= getComputerChoice();
 
 
 //arguments to be called by playRound function 
 let playerSelection = ''; //removing the prompt function to just make click function
-let computerSelection = comp;
+let computerSelection = '';
 
 
 //call this function to update for new round
@@ -109,22 +108,25 @@ function game(){
 const btnRock = document.querySelector('#rock');
 btnRock.addEventListener('click' , ()=>{
     playerSelection = "Rock";
-    console.log(playerSelection);
-    playRound(playerSelection,computerSelection);
+    computerSelection =getComputerChoice();
+    console.log(playerSelection,computerSelection);
+    console.log(playRound(playerSelection,computerSelection)) ;
 })
 
 const btnPaper = document.querySelector('#paper');
 btnPaper.addEventListener('click', () =>{
     playerSelection = "Paper";
-    console.log(playerSelection);
-    playRound(playerSelection,computerSelection);
+    computerSelection =getComputerChoice();
+    console.log(playerSelection,computerSelection);
+    console.log(playRound(playerSelection,computerSelection)) ;
 })
 
 const btnScissors = document.querySelector('#scissors');
 btnScissors.addEventListener('click', ()=>{
     playerSelection="Scissors"
-    console.log(playerSelection);
-    playRound(playerSelection,computerSelection);
+    computerSelection =getComputerChoice();
+    console.log(playerSelection,computerSelection);
+    console.log(playRound(playerSelection,computerSelection)) ;
 })
 
 
