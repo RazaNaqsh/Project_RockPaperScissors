@@ -73,7 +73,7 @@ function game(){
     
     // while(playerScore !== 5 && computerScore !== 5){
        
-        updateScores();
+        // updateScores();
         console.log("player chooses: "+player + ". Comp chooses: "+comp);
         console.log(playRound(playerSelection,computerSelection));
 
@@ -91,16 +91,28 @@ function game(){
         }
         console.log("Playerscore: "+playerScore +"  & Computerscore: "+computerScore);
     // }
-    if (playerScore == 5)
-    console.log("Player Wins!");
-    else
-    console.log("Comp Wins!");
+    // if (playerScore == 5)
+    // console.log("Player Wins!");
+    // else
+    // console.log("Comp Wins!");
 }
 
 game();
 
+// lets write pseudocode to make it easier
+// so its tell that this click addEventListener should call my playround function.
+// playround function plays one round of game
+// and with the correct playerselection,
+// so one way can be to update playerselection in each button click event and
+// call playerRound function with that parameter.
 
+const buttons = document.querySelectorAll("button");
 
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        console.log("button clicked");
+    });
+})
 
 
 
