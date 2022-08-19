@@ -1,8 +1,3 @@
-// //Input from player
-// function playerChoice(){
-//     let playerInput = prompt("enter your choice");
-//     return playerInput[0].toUpperCase() + playerInput.slice(1).toLowerCase();
-// }
 
 //input from comp
 function getComputerChoice(){
@@ -10,23 +5,10 @@ function getComputerChoice(){
     return weapons[Math.floor(Math.random() * weapons.length)]
     }
 
-    //assigning actual values
-// let player=playerChoice();
-
 
 //arguments to be called by playRound function 
 let playerSelection = ''; //removing the prompt function to just make click function
 let computerSelection = '';
-
-
-//call this function to update for new round
-// function updateScores(){
-//     player=playerChoice();
-//     comp= getComputerChoice();
-//     playerSelection = player;
-//     computerSelection = comp;
-
-// }
 
 
 //function to play one round of game
@@ -71,12 +53,8 @@ let playerScore=0;
 
 function game(){
     
-    
-    // while(playerScore !== 5 && computerScore !== 5){
-       
-        // updateScores();
         console.log("player chooses: "+playerSelection + ". Comp chooses: "+computerSelection);
-        console.log(playRound(playerSelection,computerSelection));
+        console.log("Round = " + playRound(playerSelection,computerSelection));
 
         playRound(playerSelection,computerSelection);
         if (playRound(playerSelection,computerSelection) === "You win! Rock beats Scissors" || playRound(playerSelection,computerSelection) === "You win! Scissors beats Paper" || playRound(playerSelection,computerSelection) === "You win! Paper beats Rock"){
@@ -90,12 +68,27 @@ function game(){
             computerScore+=0;
 
         }
+        document.querySelector('.play').textContent = "player chooses: "+playerSelection + ". Comp chooses: "+computerSelection ;
+        document.querySelector('.event').textContent =  "Current Round = " + playRound(playerSelection,computerSelection);
         console.log("Playerscore: "+playerScore +"  & Computerscore: "+computerScore);
-    // }
-    // if (playerScore == 5)
-    // console.log("Player Wins!");
-    // else
-    // console.log("Comp Wins!");
+        
+        
+        //displaying score in page
+        scorePlayer.textContent = 'playerScore:'+playerScore;
+        scoreComputer.textContent = 'computerScore:'+computerScore;
+
+    if (playerScore == 5)
+    {
+        scorePlayer.textContent = 'playerScore:'+playerScore+'.  Bravo! You win!';
+       document.querySelectorAll(".btn").disabled = true;
+        
+    }
+    else if (computerScore==5)
+    {
+        scoreComputer.textContent = 'computerScore:'+computerScore + '.  Oh no! You Lose!';
+        document.querySelectorAll(".btn").disabled = true;
+    }
+    
 }
 
 // game(); //gonna re-enable it later , temporarily off to avoid prompt menu
@@ -139,3 +132,7 @@ btnScissors.addEventListener('click', ()=>{
 // so i gotta show the score by textcontent i guess into div 
 // lets create div and target it first
 
+const scorePlayer = document.querySelector('.scorePlayer');
+const scoreComputer = document.querySelector('.scoreComputer');
+scorePlayer.textContent = 'playerScore:'+playerScore;
+scoreComputer.textContent = 'computerScore:'+computerScore;
