@@ -6,11 +6,13 @@ html{
     font-size: 62.5%;
 }
 div.header{
-    height: 20vh;
+    height: 12vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     font-size: 3rem;
+    background-color: antiquewhite;
+    padding-bottom: 2rem;
 }
 #btnContainer{
     height: 40vh;
@@ -19,17 +21,35 @@ div.header{
     justify-content: center;
     gap: 10rem;
 }
+.gameText{
+    display: flex;
+    height: 17rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+.play{
+    font-size: 2.5rem;
+}
+.event{
+    font-size: 2.3rem;
+}
 .btn{
-    font-size: 3rem;
+    font-size: 7rem;
     padding: 2rem;
     height: 15rem;
     width: 15rem;
+    background-color: lightcoral;
+    border:none;
 }
-.scoreBoard{
+#scores{
     height: 25vh;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
     font-size: 2.5rem;
 }
+
+/* https://michalosman.github.io/rock-paper-scissors/   ill try to make like this one*/

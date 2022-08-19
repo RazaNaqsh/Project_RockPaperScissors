@@ -72,8 +72,8 @@ function game(){
         
         
         //displaying score in page
-        scorePlayer.textContent = 'playerScore:'+playerScore;
-        scoreComputer.textContent = 'computerScore:'+computerScore;
+        scorePlayer.textContent = 'PlayerScore:   '+playerScore;
+        scoreComputer.textContent = 'ComputerScore:    '+computerScore;
 
     if (playerScore == 5)
     {
@@ -116,6 +116,8 @@ btnScissors.addEventListener('click', ()=>{
 
 const scorePlayer = document.querySelector('.scorePlayer');
 const scoreComputer = document.querySelector('.scoreComputer');
-scorePlayer.textContent = 'playerScore:'+playerScore;
-scoreComputer.textContent = 'computerScore:'+computerScore;
+scorePlayer.textContent = 'PlayerScore:     '+playerScore;
+scoreComputer.textContent = 'ComputerScore:     '+computerScore;
 
+document.querySelector('.play').textContent = "Choose Your Weapon!"
+document.querySelector('.event').textContent = "First to Score 5 wins.";
