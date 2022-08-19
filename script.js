@@ -7,7 +7,7 @@ function getComputerChoice(){
 
 
 //arguments to be called by playRound function 
-let playerSelection = ''; //removing the prompt function to just make click function
+let playerSelection = '';
 let computerSelection = '';
 
 
@@ -45,12 +45,13 @@ return "Wrong input!"
 }
 
 
-//game function
 
 //set default scores
 let computerScore = 0;
 let playerScore=0;
 
+
+//game function
 function game(){
     
 
@@ -77,13 +78,17 @@ function game(){
     if (playerScore == 5)
     {
         scorePlayer.textContent = 'playerScore:'+playerScore+'.  Bravo! You win!';
-       document.querySelectorAll(".btn").disabled = true;
+       document.querySelector("#rock").disabled = true;
+       document.querySelector("#paper").disabled = true;
+       document.querySelector("#scissors").disabled = true;
         
     }
     else if (computerScore==5)
     {
         scoreComputer.textContent = 'computerScore:'+computerScore + '.  Oh no! You Lose!';
-        document.querySelectorAll(".btn").disabled = true;
+        document.querySelector("#rock").disabled = true;
+        document.querySelector("#paper").disabled = true;
+        document.querySelector("#scissors").disabled = true;
     }
     
 }
@@ -113,3 +118,6 @@ const scorePlayer = document.querySelector('.scorePlayer');
 const scoreComputer = document.querySelector('.scoreComputer');
 scorePlayer.textContent = 'playerScore:'+playerScore;
 scoreComputer.textContent = 'computerScore:'+computerScore;
+
+
+console.log(document.querySelectorAll("#rock"));
