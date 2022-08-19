@@ -79,9 +79,13 @@ function game(){
     {
         scorePlayer.textContent = 'PlayerScore:     '+playerScore;
         document.querySelector('.result').textContent="Ahoyy! You WIN the GAME";
-       document.querySelector("#rock").disabled = true;
-       document.querySelector("#paper").disabled = true;
-       document.querySelector("#scissors").disabled = true;
+        document.querySelector("#rock").disabled = true;
+        document.querySelector("#paper").disabled = true;
+        document.querySelector("#scissors").disabled = true;
+        rButton.style.display = "block";
+        rButton.addEventListener('click', ()=>{
+           restart();
+        })
         
     }
     else if (computerScore==5)
@@ -91,9 +95,30 @@ function game(){
         document.querySelector("#rock").disabled = true;
         document.querySelector("#paper").disabled = true;
         document.querySelector("#scissors").disabled = true;
+        rButton.style.display = "block";
+        rButton.addEventListener('click', ()=>{
+            restart();
+        })
     }
     
 }
+
+//restart button
+function restart(){
+    playerScore=0;
+    computerScore=0;
+    document.querySelector('.play').textContent = "Choose Your Weapon!"
+document.querySelector('.event').textContent = "First to Score 5 wins.";
+
+    scorePlayer.textContent = 'PlayerScore:     '+playerScore;
+    scoreComputer.textContent = 'ComputerScore:     '+computerScore;
+    
+    document.querySelector("#rock").disabled = false;
+        document.querySelector("#paper").disabled = false;
+        document.querySelector("#scissors").disabled = false;
+
+}
+
 
 
 const btnRock = document.querySelector('#rock');
@@ -125,3 +150,6 @@ scoreComputer.textContent = 'ComputerScore:     '+"❔";
 
 document.querySelector('.play').textContent = "Choose Your Weapon!"
 document.querySelector('.event').textContent = "First to Score 5 wins.";
+
+const rButton = document.querySelector('#restartBtn')
+rButton.style.display = "none";
