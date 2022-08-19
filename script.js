@@ -1,8 +1,8 @@
-//Input from player
-function playerChoice(){
-    let playerInput = prompt("enter your choice");
-    return playerInput[0].toUpperCase() + playerInput.slice(1).toLowerCase();
-}
+// //Input from player
+// function playerChoice(){
+//     let playerInput = prompt("enter your choice");
+//     return playerInput[0].toUpperCase() + playerInput.slice(1).toLowerCase();
+// }
 
 //input from comp
 function getComputerChoice(){
@@ -21,17 +21,17 @@ let computerSelection = comp;
 
 
 //call this function to update for new round
-function updateScores(){
-    player=playerChoice();
-    comp= getComputerChoice();
-    playerSelection = player;
-    computerSelection = comp;
+// function updateScores(){
+//     player=playerChoice();
+//     comp= getComputerChoice();
+//     playerSelection = player;
+//     computerSelection = comp;
 
-}
+// }
 
 
 //function to play one round of game
-function playRound(playerSelection,computerSelection) {
+function playRound() {
     
     //player winning scenarios
 if (playerSelection==="Rock" && computerSelection==="Scissors")
@@ -110,8 +110,21 @@ const btnRock = document.querySelector('#rock');
 btnRock.addEventListener('click' , ()=>{
     playerSelection = "Rock";
     console.log(playerSelection);
-    // playRound(playerSelection);
+    playRound(playerSelection,computerSelection);
 })
 
+const btnPaper = document.querySelector('#paper');
+btnPaper.addEventListener('click', () =>{
+    playerSelection = "Paper";
+    console.log(playerSelection);
+    playRound(playerSelection,computerSelection);
+})
+
+const btnScissors = document.querySelector('#scissors');
+btnScissors.addEventListener('click', ()=>{
+    playerSelection="Scissors"
+    console.log(playerSelection);
+    playRound(playerSelection,computerSelection);
+})
 
 
