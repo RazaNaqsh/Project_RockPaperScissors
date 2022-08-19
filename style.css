@@ -46,10 +46,15 @@ div.header{
 #scores{
     height: 25vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     gap: 2rem;
     font-size: 2.5rem;
+}
+.whilePlay{
+    display: flex;
+    gap: 3rem;
 }
 
 /* https://michalosman.github.io/rock-paper-scissors/   ill try to make like this one*/
