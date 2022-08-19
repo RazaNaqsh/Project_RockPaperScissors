@@ -105,9 +105,6 @@ function game(){
     
 }
 
-//result txt
-const result =document.querySelector('.result');
-
 
 //restart button
 function restart(){
@@ -127,6 +124,8 @@ document.querySelector('.event').textContent = "First to Score 5 wins.";
 }
 
 
+
+// selectors
 
 const btnRock = document.querySelector('#rock');
 btnRock.addEventListener('click' , ()=>{
@@ -160,3 +159,5 @@ document.querySelector('.event').textContent = "First to Score 5 wins.";
 
 const rButton = document.querySelector('#restartBtn')
 rButton.style.display = "none";
+
+const result =document.querySelector('.result');

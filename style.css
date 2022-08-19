@@ -81,4 +81,11 @@ div{
     border-radius: 1rem;
 }
 
-/* https://michalosman.github.io/rock-paper-scissors/   ill try to make like this one*/
+.btn:hover{
+opacity: 0.9;
+transform: scale(1.1);
+}
+#restartBtn:hover{
+    opacity: 0.8;
+    transform: scale(0.9);
+}
