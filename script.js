@@ -78,7 +78,8 @@ function game(){
     if (playerScore == 5)
     {
         scorePlayer.textContent = 'PlayerScore:     '+playerScore;
-        document.querySelector('.result').textContent="Ahoyy! You WIN the GAME";
+        result.style.display = "Block";
+        result.textContent="Ahoyy! You WIN the GAME";
         document.querySelector("#rock").disabled = true;
         document.querySelector("#paper").disabled = true;
         document.querySelector("#scissors").disabled = true;
@@ -91,7 +92,8 @@ function game(){
     else if (computerScore==5)
     {
         scoreComputer.textContent = 'ComputerScore:     '+computerScore;
-        document.querySelector('.result').textContent="You LOSE! Computer won the GAME.";
+        result.textContent="You LOSE! Computer won the GAME.";
+        result.style.display = "Block";
         document.querySelector("#rock").disabled = true;
         document.querySelector("#paper").disabled = true;
         document.querySelector("#scissors").disabled = true;
@@ -103,6 +105,10 @@ function game(){
     
 }
 
+//result txt
+const result =document.querySelector('.result');
+
+
 //restart button
 function restart(){
     playerScore=0;
@@ -112,7 +118,8 @@ document.querySelector('.event').textContent = "First to Score 5 wins.";
 
     scorePlayer.textContent = 'PlayerScore:     '+playerScore;
     scoreComputer.textContent = 'ComputerScore:     '+computerScore;
-    
+    rButton.style.display = "none";
+    result.style.display = "none";
     document.querySelector("#rock").disabled = false;
         document.querySelector("#paper").disabled = false;
         document.querySelector("#scissors").disabled = false;
