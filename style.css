@@ -124,14 +124,14 @@ opacity: 0.9;
 @media only screen and (max-width: 700px) {
     div.header{
         font-size: 1.7rem;
-        height: 10rem;
+        height: 9rem;
        
     }
     #scores{
         font-size: 2rem;
     }
     .gameText{
-        margin: 3rem;
+        margin: 2rem;
     }
     .play{
         font-size: 1.7rem;
@@ -145,7 +145,7 @@ opacity: 0.9;
         font-size: 5rem;
     }
     #btnContainer{
-        margin: 4rem;
-        gap: 4rem;
+        margin: 3rem;
+        gap: 2rem;
     }
   }
