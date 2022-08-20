@@ -74,7 +74,8 @@ function game(){
         //displaying score in page
         scorePlayer.textContent = 'PlayerScore:   '+playerScore;
         scoreComputer.textContent = 'ComputerScore:    '+computerScore;
-
+        
+//result condition
     if (playerScore == 5)
     {
         scorePlayer.textContent = 'PlayerScore:     '+playerScore;
